@@ -1,10 +1,12 @@
 import numpy as np
 
+
 class Joint():
     def __init__(self, name, parent=None, children=None):
         self.name = name
         self.parent = parent
         self.children = children
+
 
 class MocapData():
     def __init__(self):
@@ -13,7 +15,7 @@ class MocapData():
         self.channel_names = []
         self.framerate = 0.0
         self.root_name = ''
-    
+
     def traverse(self, j=None):
         stack = [self.root_name]
         while stack:
@@ -40,14 +42,14 @@ class MocapData():
 
     def get_skeleton_tree(self):
         tree = []
-        root_key =  [j for j in self.skeleton if self.skeleton[j]['parent']==None][0]
-        
+        root_key = [j for j in self.skeleton if self.skeleton[j]['parent'] == None][0]
+
         root_joint = Joint(root_key)
-    
+
     def get_empty_channels(self):
-        #TODO
+        # TODO
         pass
 
     def get_constant_channels(self):
-        #TODO
+        # TODO
         pass

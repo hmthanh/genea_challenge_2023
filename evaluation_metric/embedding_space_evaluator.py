@@ -5,6 +5,7 @@ from scipy import linalg
 from embedding_net import EmbeddingNet
 
 import warnings
+
 warnings.filterwarnings("ignore", category=RuntimeWarning)  # ignore warnings
 
 

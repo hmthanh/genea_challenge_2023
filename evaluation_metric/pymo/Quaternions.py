@@ -496,5 +496,3 @@ class Quaternions:
         qs[..., 3] = q3
 
         return cls(qs)
-
-
